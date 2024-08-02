@@ -17,7 +17,7 @@ public class Main {
         String[] operands = expression.split("[+\\-/*]");
         if (operands.length != 2) throw new Exception("Должно быть два числа и одно арифметическое дейтвие!");
         oper = detectOperation(expression);
-        //if (oper== null) throw new Exception("Не верный формат выражения");
+
 
         if (Roman.isRoman(operands[0]) && Roman.isRoman(operands[1])) {
             elem1 = Roman.convertToArabian(operands[0]);
@@ -31,7 +31,10 @@ public class Main {
             throw new Exception("Не верный формат ввода чисел!!!");
         }
 
-        if (elem1 > 10 || elem2 > 10) {
+        if ((elem1 > 10) || (elem2 > 10)) {
+            throw new Exception("Числа должны быть от 1 до 10");
+        }
+        if ((elem1 <1) || (elem2 <1)) {
             throw new Exception("Числа должны быть от 1 до 10");
         }
         int arabian = calculator(elem1, elem2, oper);
