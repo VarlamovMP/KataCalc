@@ -28,7 +28,7 @@ public class Main {
             elem2 = Integer.parseInt(operands[1]);
             isRoman = false;
         } else {
-            throw new Exception("Не верный формат ввода чисел!!!");
+            throw new Exception("Не верный диапазон римских чисел или не верный формат римского числа!!!");
         }
 
         if ((elem1 > 10) || (elem2 > 10)) {
